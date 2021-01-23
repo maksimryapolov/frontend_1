@@ -1,0 +1,96 @@
+.b-header {
+    @include latoBlack;
+    @include sectionBackground('../images/header-img.png');
+    color: $white;
+    text-transform: uppercase;
+
+    &__block {
+        &::after {
+            content: '';
+            display: inline-block;
+            background: url(../images/Place_Car_Image_here.png) no-repeat 50% 50%;
+            background-size: cover;
+            max-width: 545px;
+            width: 545px;
+            height: 315px;
+            position: relative;
+            left: 50%;
+            transform: translate(-50%, 20%);
+
+            @include media-breakpoint-down(xs) {
+                width: 260px;
+                height: 155px;
+            }
+        }
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+
+        &-indent {
+            padding-top: 40px;
+        }
+
+        @include media-breakpoint-only(sm) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__full-name {
+        flex-grow: 1;
+
+        &-greed {
+            flex-grow: 2.2;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__main-name {
+        font-size: 1.3rem;
+
+        span {
+            color: #daa505;
+        }
+    }
+
+    &__top-description {
+        font-size: .8rem;
+    }
+
+    &__info {
+        line-height: 45px;
+        text-align: center;
+        letter-spacing: 1.7px;
+
+        &-indent {
+            padding-top: 40px;
+        }
+    }
+
+    &__action {
+        color: $siteColor;
+        font-size: 1.7rem;
+    }
+
+    &__number {
+        font-size: 3.2rem;
+
+        @include media-breakpoint-down(xs) {
+            font-size: 2.2rem;
+        }
+    }
+
+    &__site {
+        letter-spacing: 12px;
+        font-size: .8rem;
+
+          @include media-breakpoint-down(xs) {
+            letter-spacing: 7px;
+        }
+    }
+}

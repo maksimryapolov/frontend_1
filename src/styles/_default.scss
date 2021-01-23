@@ -1,0 +1,26 @@
+.btn-default {
+    @include button;
+    color: $white;
+    background: $black;
+}
+
+.btn-yellow {
+    @include button;
+    color: $black;
+    background: $siteColor;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: $white;
+
+    &:hover {
+        color: $white;
+        text-decoration: none;
+    }
+}

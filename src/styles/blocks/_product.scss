@@ -1,0 +1,102 @@
+.b-product {
+    text-align: center;
+
+    @include media-breakpoint-down (xs) {
+        width: 100%;
+        margin: 0;
+    }
+
+    &__about {
+        position: relative;
+        z-index: -1;
+        padding-top: 70px;
+        background-color: $white;
+
+        &-premium {
+            background-color: $siteColor;
+
+            .b-product__price {
+                color: $black;
+            }
+
+            .b-product__button {
+                background: #1b1b1b;
+                color: $white;
+            }
+
+            .b-product__triangle {
+                border: 60px solid transparent;
+                border-right: 0px solid $black;
+                border-bottom: 60px solid $black;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    background: url(../images/star.svg) no-repeat 50% 50%;
+                    background-size: cover;
+                    position: absolute;
+                    transform: translate(-140%, 160%);
+                }
+            }
+        }
+    }
+
+    &__offer {
+        padding: 0 20px;
+
+        @include media-breakpoint-down(xs) {    
+            padding: 0;
+        }
+    }
+
+    &__img {
+        content: '';
+        display: inline-block;
+        width: 280px;
+        height: 136px;
+        background: url(../images/Layer_1_copy.png) no-repeat 50% 50%;
+        background-size: cover;
+
+        @include media-breakpoint-between(md, lg) {
+            width: 100%;
+            height: 120px;
+        }
+        
+        &-offset {
+            transform: translateY(45%);
+        }
+    }
+
+    &__title {
+        font-size: 1.3rem;
+    }
+
+    &__description {
+        @include lato;
+        font-size: .6rem;
+        text-transform: none;
+        padding: 10px 50px 0 50px;
+    }
+
+    &__price {
+        font-size: 1.6rem;
+        color: $siteColor;
+
+        &-indent {
+            margin: 20px 0;
+        }
+    }
+
+    &__button {
+        font-size: 1.1rem;
+
+        &-indent {
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+.b-application {
+    @include latoBlack;
+    padding: $sectionSpaceTop 0 0 0;
+
+    &__content {
+        padding-top: 50px;
+    }
+
+    &__description {
+        @include lato;
+        padding: 25px 0 40px 0;
+    }
+
+    &__item-img {
+        width: 120px;
+    }
+
+    &__links {
+        display: flex; 
+        justify-content: space-between; 
+    }
+    
+    &__link {
+        background: $black;
+        padding: 4px 20px;
+        border-radius: 30px;
+    }
+
+    &__block-img {
+        height: 310px;
+
+        img {
+            height: 100%;
+        }
+
+        @include media-breakpoint-up (xs) {
+            margin-top: 20px;
+            display: flex;            
+            justify-content: flex-end;
+        }
+    }
+}
+    

@@ -1,0 +1,53 @@
+.b-feedback {
+    @include latoBlack;
+
+    &__block {
+        box-shadow: 0 5px 25px rgba(0,0,0,.5);
+    }
+
+    &-indent {
+        margin-top: 30px;
+    }
+
+    &__title {
+        color: $white;
+        padding: 10px;
+        background-color: #171717;
+       
+        span {
+            color: $siteColor;
+        }
+    }
+
+    &__form {
+        background-color: $white;
+        padding: 10px;
+    }
+
+    &__fields {
+        display: flex;
+    }
+
+    &__field {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #e4e4e4;
+        flex-grow: 1;
+        width: 50%;
+        margin-bottom: 30px;
+        
+        &:first-child {
+            margin-right: 10px;
+        }
+
+        &:nth-child(odd) {
+            &::placeholder {
+                color: $black;
+            }            
+        }
+    }
+
+    &__button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,57 @@
+.b-advantages {
+    @include latoBlack;
+    @include sectionBackground('../images/PLace_BG_image.png');
+    color: $white;
+    padding: $sectionSpaceTop 0;
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__items {
+        &-indent {
+            margin: 75px 0% 0 5%;
+        }
+    }
+
+    &__item {
+        display: flex;
+    }
+
+    &__icon {
+        border-radius: 50%;
+        background-color: $siteColor;
+        display: flex;
+        margin: 0 35px auto auto;
+        padding: 25px;
+    }
+
+    &__icon-item {
+        margin: auto;
+        width: 20px;
+        height: 20px;
+    }
+
+    &__name-item {
+        color: $siteColor;
+    }
+
+    &__description-item {
+        @include lato;
+        font-size: .8rem;
+        padding-right: 10rem;
+
+        &_indent {
+            margin: 20px 0 35px 0;
+
+            @include media-breakpoint-down (md) {
+                padding: 0;
+            }
+        }
+    }
+
+    &__button {
+        margin: auto;
+    }
+}

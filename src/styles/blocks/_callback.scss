@@ -1,0 +1,15 @@
+.b-callback {
+    background-color: $siteColor;
+    padding: $sectionSpaceTop 0;
+    text-align: center;
+    color: $black;
+    @include latoBlack;
+
+    &__message {
+        font-size: 1.7rem;
+    }
+
+    &__number {
+        font-size: 2.6rem;
+    }
+}

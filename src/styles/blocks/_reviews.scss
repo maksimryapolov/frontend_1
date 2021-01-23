@@ -1,0 +1,76 @@
+.b-reviews {
+   @include latoBlack;
+   @include sectionBackground('../images/Place_your_Image.png'); 
+   padding: $sectionSpaceTop 0 90px 0;
+   color: $white;
+
+   &__items {
+      display: flex;
+      justify-content: space-evenly;
+
+      &-indent {
+         margin-top: 50px;
+      }
+   }
+
+   &__item {
+      background-color: $black;
+      padding: 20px 35px;
+      border-radius: 25px;
+      position: relative;
+
+      @include media-breakpoint-down (sm) {
+            &:not(:last-child) {
+               margin-bottom: 35px;
+            }
+
+            margin-right: 10px;
+            margin-left: 10px;
+      }
+   }
+
+   &__message {
+      @include lato;
+      font-size: .76rem;
+   }
+
+   &__full-name {
+      line-height: inherit;
+      text-align: inherit;
+   }
+
+   &__main-name {
+      font-size: inherit;
+   }
+
+   &__position {
+      font-size: inherit;
+   }
+
+   &__person {
+      display: flex;
+
+      &-indent {
+         margin-top: 15px;
+      }
+   }
+
+   &__avatar {
+      background: url('../images/Layer_6.png') no-repeat 50% 50%;
+      background-size: cover;
+      width: 50px;
+      height: 50px;
+
+      &-indent {
+         margin-right: 15px;
+      }
+   }
+
+   &__triangle {
+      position: absolute;
+      border: 15px solid transparent;
+      border-left: 15px solid $black;
+      border-top: 15px solid $black;
+      bottom: -30px;
+   }
+}

@@ -1,0 +1,32 @@
+$siteColor: #ffc61a;
+$layer: #000000e6;
+$sectionSpaceTop: 60px;
+
+@mixin lato {
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+}
+
+@mixin latoBlack {
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+}
+
+@mixin Bebas {
+    font-weight: 400;
+    font-family: 'Bebas', sans-serif;
+}
+
+@mixin button {
+    @include Bebas;
+    border-radius: 5px;
+    border: none;
+    padding: 3px 20px;
+}
+
+@mixin sectionBackground ($url) {
+    background: url($url) $layer;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
